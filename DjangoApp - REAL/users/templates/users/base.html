@@ -1,0 +1,162 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+<div
+  style="background-image: url(https://images2.imgbox.com/8c/49/VP3Vfzfe_o.jpg);  background-repeat: no-repeat;background-attachment: fixed;background-size: cover;">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width= device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!--Font awesome icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <style>
+      .dropbtn {
+        background-color: #11064d;
+        color: white;
+        padding: 10px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+      }
+
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        right: 0;
+        background-color: #11064d;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+
+      .dropdown-content a {
+        color: whitesmoke;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+
+      .dropdown-content a:hover {
+        background-color: #0a013b;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      .dropdown:hover .dropbtn {
+        background-color: #0a013b;
+      }
+    </style>
+
+    <title>{% block title %} {% endblock %} </title>
+  </head>
+
+  <body style="background-color: transparent;">
+    {% if user.is_authenticated %}
+
+    <nav class="navbar-light py-4 " style="background-color: #11064d; text-align: center;">
+      <a class="active" href="/"><img src="{% static "users/media/LOGOFINAL.png" %}" alt="logo"  width="180" height="50" /></a> &nbsp;
+      <div class="dropdown" style="float:right;">
+        <button class="dropbtn">
+          <h5><a style="color:white"><i class="fa fa-user">&nbsp;&nbsp;</i></a></h5>
+        </button>
+        <div class="dropdown-content">
+          <a style="color:white" class="active"
+            href="{% url 'users-profile' %}">{{user.username.title|default:'Guest'}}&nbsp;<i
+              class="fa fa-fw fa-user"></i></a>
+          <a style="color:white" href="{% url 'logout' %}">Sign Out&nbsp;<i class="fa fa-fw fa-unlock-alt"></i></a></h5>
+          <a style="color:white" href="{% url 'users-contact' %}">Contact Us&nbsp;<i
+              class="fa fa-fw fa-envelope"></i></a></h5>
+        </div>
+      </div>
+    </nav>
+    <div class="container p-3 my-3"
+      style="text-align: center; backdrop-filter: blur(5px); background-color: rgba(0, 0, 0, 0.61)">
+      <nav>
+        <a style=" color: lightblue; font-size:150%" class="active" href="{% url 'phishing1' %}">
+          PHISHING</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a style=" color: lightblue; font-size:150%" class="active" href="{% url 'vishing1' %}">
+          VISHING</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a style=" color: lightblue; font-size:150%" class="active" href="{% url 'pretexting1' %}">
+          PRETEXTING</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a style=" color: lightblue; font-size:150%" class="active" href="{% url 'impersonating1' %}">
+          IMPERSONATING</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a style=" color: lightblue; font-size:150%" class="active" href="{% url 'baiting1' %}">
+          BAITING</a>&nbsp;&nbsp;&nbsp;&nbsp;
+      </nav>
+    </div>
+    {% else %}
+    <nav class="navbar-light py-4 " style="background-color: #11064d; text-align: center;">
+      <a class="active" href="/"><img src="{% static "users/media/LOGOFINAL.png" %}" alt="logo"  width="180" height="50" /></a> &nbsp;
+      <div class="dropdown" style="float:right;">
+        <button class="dropbtn">
+          <h5><a style="color:white" href="{% url 'users-register' %}">Sign Up&nbsp;<i class="fa fa-fw fa-lock"></i></a>
+          </h5>
+        </button>
+      </div>
+    </nav>
+    {% endif %}
+
+
+    <!--Any flash messages pop up in any page because this is the base template-->
+    {% if messages %}
+    <div class="alert alert-dismissible" role="alert">
+      {% for message in messages %}
+      <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+      {% endfor %}
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    {% endif %}
+    {% block content %}{% endblock %}
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"></script>
+
+    <!-- A plugin for password show/hide  -->
+    <script src="https://unpkg.com/bootstrap-show-password@1.2.1/dist/bootstrap-show-password.min.js"></script>
+
+  </body>
+
+  <footer>
+    <nav class="navbar navbar-expand-md navbar-light; py-4"><br>
+      <table style="width:100%; text-align: center">
+        <tr>
+          <td>
+            <h6 style="color: lightblue; text-align: center; margin: 0; ">© Copyright Reserve SEPTMUST 2023</h6>
+          </td>
+        </tr>
+      </table>
+    </nav>
+  </footer>
+</div>
+
+</html>

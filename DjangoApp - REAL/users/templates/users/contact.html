@@ -1,0 +1,47 @@
+{% extends "users/base.html" %}
+{% block title %} Contact Page {% endblock title%}
+{% block content %}
+
+
+<div class="container p-3 my-3">
+  <div class="jumbotron" style="text-align: justify; backdrop-filter: blur(5px); background-color: rgba(0, 0, 0, 0.61)">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-7">
+          <div class="card shadow-lg border-0 rounded-lg mt-0 mb-5">
+            <div class="card-header justify-content-center">
+              <h3 class="font-weight-light my-4 text-center">Contact Us</h3>
+            </div>
+            <div>
+              <div class="card-body">
+                <form method="post">
+                  {% csrf_token %}
+                  {% for field in form %}
+                  <div>
+                    <p>
+                      {{ field.label_tag }}<br> {{ field }}</p>
+                    {% if field.help_text %}
+                    <small style="display: none">{{ field.help_text }}!!</small>
+                    {% endif %}
+                    {% for error in field.errors %}
+                    <p style="color: red">{{ error }}!!</p>
+                    {% endfor %}
+                    {% endfor %}
+                  </div>
+                  <div class="form-group mt-4 mb-0">
+                    <button type="submit" class="col-md-12 btn btn-dark">Submit Enquiry</button><br><br>
+                  </div>
+                  <h5 style="text-align: center;"><a style="color:rgb(0, 0, 0);" href="https://wa.link/m8ge0q"><i
+                        class="fa fa-fw fa-phone-square"></i>&nbsp;Contact Me On WhatsApp</a></h5>
+                </form>
+              </div>
+            </div>
+            <div class="card-footer text-center">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% endblock content %}

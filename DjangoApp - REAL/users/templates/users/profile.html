@@ -1,0 +1,86 @@
+{% extends "users/base.html" %}
+{% block title %}{{user.username}}{% endblock title %}
+{% block content %}
+{% if user.is_authenticated %}
+<div>
+    <div class="container p-3 my-3">
+        <div class="jumbotron"
+            style="text-align: justify; backdrop-filter: blur(5px); background-color: rgba(0, 0, 0, 0.61)">
+            <div class="container"><br><br>
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="card shadow-lg border-0 rounded-lg mt-0 mb-3">
+                            <div class="card-header justify-content-center">
+                                <div class="row my-3 p-3">
+                                    <div class="w3-card" style="width:50%">
+                                        <img src="{{ user.profile.avatar.url }} " style="cursor: pointer; width:50%">
+                                        <div class="w3-container">
+                                            <h4><b>{{user.username}}</b></h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% if user_form.errors %}
+                                <div class="alert alert-danger alert-dismissible" role="alert">
+                                    <div id="form_errors">
+                                        {% for key, value in user_form.errors.items %}
+                                        <strong>{{ value }}</strong>
+                                        {% endfor %}
+                                    </div>
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                {% endif %}
+                                <div class="form-content">
+                                    <form method="post" enctype="multipart/form-data">
+                                        {% csrf_token %}
+                                        <div class="form-row">
+                                            <div class="col-md-5">
+                                                <div class="form-group">
+                                                    <table>
+                                                        <tr>
+                                                            <td><b>First Name:</b></td>
+                                                            <td>{{ user_form.first_name }}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><b>Last Name:</b></td>
+                                                            <td>{{ user_form.last_name }}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><b>Username:</b></td>
+                                                            <td>{{ user_form.username }}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><b>Email:</b></td>
+                                                            <td>{{ user_form.email }}</td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                                <div class="form-group">
+                                                    <a href="{% url 'password_change' %}">Change Password</a>
+                                                    <hr>
+                                                    <label class="small mb-1">Change Avatar:</label>
+                                                    {{ profile_form.avatar }}
+                                                </div>
+                                                <label class="small mb-1">Bio:</label> {{ profile_form.bio }}
+                                            </div>
+                                        </div>
+                                        <br><br>
+                                        <button type="submit" class="btn btn-dark btn-lg">Save Changes</button>
+                                        <button type="reset" class="btn btn-dark btn-lg">Reset</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><br><br><br><br><br><br><br>
+    </div>
+    {% else %}
+
+    <meta http-equiv="refresh" content="1; url = {% url 'login' %}" />
+
+    {% endif %}
+
+    {% endblock content %}

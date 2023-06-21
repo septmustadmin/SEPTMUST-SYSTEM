@@ -1,0 +1,84 @@
+{% extends "users/base.html" %}
+{% block title %} BAITING MODULE 3 {% endblock title%}
+{% block content %}
+{% if user.is_authenticated %}
+
+
+<div>
+    <div class="container p-3 my-3">
+        <div class="jumbotron"
+            style="text-align: justify; backdrop-filter: blur(5px); background-color: rgba(0, 0, 0, 0.61)">
+            <h2 class="display-4" style="text-transform:uppercase; color: lightblue;">Module 3: Building Resilience
+            </h2><br><br><br>
+            <h2 style="color: lightblue;">3.1 Building Resilience
+                Developing critical thinking skills,
+                Enhancing emotional intelligence,
+                Strengthening personal boundaries</h2><br><br>
+
+                <h3 style="color: lightblue;">3.1.1 Developing critical thinking skills:</h3>
+                <p style="color: lightblue;">Developing critical thinking skills can help individuals evaluate
+                    information and make informed decisions. To enhance critical thinking skills, consider the
+                    following: <br><br>
+                    Question information: Instead of accepting information at face value, question its source,
+                    credibility, and potential biases. Look for evidence and multiple perspectives before forming
+                    opinions. <br><br>
+                    Verify information: Fact-check information using reliable sources before accepting or sharing it. Be
+                    cautious of misinformation or fake news that can be used as baiting tools. <br><br>
+                    Evaluate logical reasoning: Assess the logical coherence and consistency of arguments or claims.
+                    Look for evidence, reasoning, and the presence of fallacies or manipulative tactics. <br><br>
+                    Develop research skills: Enhance your ability to find and evaluate information by improving your
+                    research skills. Learn to navigate reputable sources and differentiate between reliable and
+                    unreliable information.
+                </p><br><br>
+                <h3 style="color: lightblue;">3.1.2 Enhancing emotional intelligence:</h3>
+                <p style="color: lightblue;">Emotional intelligence involves understanding and managing emotions, both
+                    in oneself and in others. To enhance emotional intelligence: <br><br>
+                    Practice self-awareness: Pay attention to your own emotions, triggers, and reactions. Understand how
+                    emotions can influence your decision-making and be mindful of emotional biases. <br><br>
+                    Empathy and perspective-taking: Seek to understand others' perspectives and emotions. Put yourself
+                    in their shoes to gain insight into their motivations and behaviors. <br><br>
+                    Effective communication: Develop skills to express your emotions and thoughts clearly and
+                    respectfully. Listen actively and try to understand others' emotions and needs. <br><br>
+                    Emotion regulation: Learn techniques to manage and regulate your emotions effectively. This includes
+                    stress management, self-care practices, and developing healthy coping mechanisms.</p> <br><br>
+
+                <h3 style="color: lightblue;">3.1.3 Strengthening personal boundaries:</h3>
+                <p style="color: lightblue;">Strengthening personal boundaries is essential for protecting oneself from
+                    manipulation and exploitation. Consider the following: <br><br>
+                    Define your values and priorities: Identify what is important to you and establish clear boundaries
+                    around those areas. This helps in making informed decisions aligned with your values. <br><br>
+                    Learn to say no: Practice setting limits and saying no when necessary. It is okay to decline
+                    requests or opportunities that go against your boundaries or values. <br><br>
+                    Trust your instincts: Pay attention to your gut feelings and intuition. If something feels off or
+                    manipulative, trust your instincts and take appropriate actions. <br><br>
+                    Surround yourself with supportive people: Build a network of trusted individuals who respect your
+                    boundaries and provide support when needed.
+                </p><br><br>
+                <div>
+                    <br>
+                    <h3 style="color: lightblue;">Short comics to show you how BAITING happens</h3><br>
+                    <iframe
+                        src="https://docs.google.com/presentation/d/e/2PACX-1vRn-yBwn9EGlvIBbD0Py7WIfUdyAGbWiUOOQ0Sm_jWZlDyRUsOygoiq2OED-ECQyr17RQLUs9OepO1r/embed?start=false&loop=true&delayms=10000"
+                        frameborder="0" width="100%" height="600px" allowfullscreen="true" mozallowfullscreen="true"
+                        webkitallowfullscreen="true"></iframe>
+                </div><br><br>
+                <div>
+                    <div style="float: left;">
+                        <a class="btn btn-primary btn-lg" style="background-color: #11064d; border-color: black;"
+                        href="{% url 'baiting2' %}" class="btn btn-primary"> ☚ BACK TO BAITING MODULE 2</a><br><br>
+                    </div>
+                    <div style="float: right;">
+                        <a class="btn btn-primary btn-lg" style="background-color: #11064d; border-color: black;"
+                            href="{% url 'baiting4' %}" class="btn btn-primary">GO TO BAITING MODULE 4 ☛</a><br><br>
+                    </div>
+                </div><br><br>
+
+            </div>
+        </div>
+    </div>
+    {% else %}
+
+    <meta http-equiv="refresh" content="1; url = {% url 'login' %}" />
+
+    {% endif %}
+    {% endblock content %}

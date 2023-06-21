@@ -1,0 +1,53 @@
+{% extends "users/base.html" %}
+{% block title %}Confirm Register{% endblock title %}
+{% block content %}
+{% load static %}
+
+<div>
+    <div class="container p-3 my-3">
+        <div class="jumbotron"
+            style="text-align: justify; backdrop-filter: blur(5px); background-color: rgba(0, 0, 0, 0.61)">
+            <div>
+                <table style="width:100%; text-align: center">
+                    <tr>
+                        <td>
+                            <img src="{% static " users/media/septmustlogo.png" %}" alt="logo" width="200" height="200" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h3 style="color: lightblue;">ACCOUNT SUCCESSFULLY CREATED. WELCOME TO SOCIAL ENGINEERING
+                                TRAINING MODULE FOR UNIVERSITY STUDENTS (SEPTMUST)</h3>
+                        </td>
+                    </tr>
+                </table>
+            </div><br>
+            <div class="row justify-content-center">
+                <div class="col-lg-5">
+                    <div class="card shadow-lg border-0 rounded-lg mt-0 mb-3">
+                        <div class="card-header justify-content-center">
+                            <div class="card-body">
+                                <h5 class="card-title" style="text-align: center; ">THANK YOU FOR
+                                    REGISTERING WITH SEPTMUST</h5>
+                                <h5 class="card-title" style="text-align: center;  ">Please continue to
+                                    sign in</h5>
+                                <br>
+                                <div>
+                                    <table style="width:100%; text-align: center">
+                                        <tr>
+                                            <td><a class="btn btn-primary btn-lg"
+                                                    style="background-color: black; border-color: black;"
+                                                    href="{% url 'login' %}" class="btn btn-primary">Sign In</a></td>
+                                        </tr>
+                                    </table>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    {% endblock content %}

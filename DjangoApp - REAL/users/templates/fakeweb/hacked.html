@@ -1,0 +1,33 @@
+{% extends "users/base.html" %}
+{% block title %} Hacked {% endblock title%}
+{% block content %}
+
+<div><br>
+    <div class="container p-1 my-1">
+        <div class="jumbotron" style="background-color: #ffffff; text-align: center">
+
+            <h1 style="text-transform:uppercase; color: red; font-size: 100px;">MISTER, YOU HAVE BEEN HACKED!!!!!</h1>
+            <br><br><br>
+            <h2>But dont worry, this is just an example to show you that it is fairly easy to fall for phishing website.
+                <br><br>
+                Although, you could have been hacked for real. Which is why, I design this SEPTMUST system to help you.
+                <br><br>
+                Please proceed to the Sign In page or Sign Up page if you have not register yet.
+            </h2><br><br>
+
+
+            <a class="btn btn-primary btn-lg" style="background-color: black; border-color: black;"
+                href="{% url 'login' %}" class="btn btn-primary">Sign in</a></td>
+            <a class="btn btn-primary btn-lg" style="background-color: black; border-color: black;"
+                href="{% url 'users-register' %}" class="btn btn-primary">Sign up</a></td>
+
+
+        </div>
+    </div>
+
+</div><br><br><br>
+
+<!-- <meta http-equiv="refresh" content="1; url = {% url 'login' %}" /> -->
+
+
+{% endblock content %}

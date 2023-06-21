@@ -1,0 +1,84 @@
+{% extends "users/base.html" %}
+{% block title %} BAITING MODULE 4 {% endblock title%}
+{% block content %}
+{% if user.is_authenticated %}
+
+
+<div>
+    <div class="container p-3 my-3">
+        <div class="jumbotron"
+            style="text-align: justify; backdrop-filter: blur(5px); background-color: rgba(0, 0, 0, 0.61)">
+            <h2 class="display-4" style="text-transform:uppercase; color: lightblue;">Module 4: Responding to Baiting
+                Attempts
+            </h2><br><br><br>
+            <h2 style="color: lightblue;">4.1 Responding to Baiting Attempts
+                Reporting suspicious activity,
+                Seeking help and support,
+                Recovering from baiting incidents</h2><br>
+
+            <h3 style="color: lightblue;">4.1.1 Reporting suspicious activity:</h3>
+            <p style="color: lightblue;">If you encounter suspicious baiting attempts, it is important to report them.
+                Take the following steps: <br><br>
+                On social media platforms: Utilize reporting features provided by the platform to report suspicious
+                posts, accounts, or messages. Provide as much detail as possible about the issue. <br><br>
+                With authorities: If you believe you are a victim of a baiting-related crime or encounter illegal
+                activities, report the incident to your local law enforcement agency or the appropriate cybercrime
+                division. <br><br>
+                In the workplace or educational environment: If you come across baiting attempts in professional or
+                academic settings, report the incidents to the relevant authority, such as a supervisor, HR department,
+                or school administration.
+            </p><br><br>
+            <h3 style="color: lightblue;">4.1.2 Seeking help and support:</h3>
+            <p style="color: lightblue;">If you have fallen victim to baiting or are feeling emotionally affected by it,
+                seek help and support: <br><br>
+                Talk to a trusted friend or family member: Share your experience and emotions with someone you trust.
+                They can provide emotional support and help you process the situation. <br><br>
+                Contact helplines or support organizations: Reach out to helplines or support organizations that
+                specialize in cybercrime, online safety, or emotional well-being. They can provide guidance, resources,
+                and assistance. <br><br>
+                Consult with professionals: If needed, consider seeking help from mental health professionals, such as
+                therapists or counselors, who can support you in dealing with the emotional aftermath of a baiting
+                incident.</p> <br><br>
+
+            <h3 style="color: lightblue;">4.1.3 Recovering from baiting incidents:</h3>
+            <p style="color: lightblue;">Recovering from baiting incidents can be challenging, but there are steps you
+                can take to regain control: <br><br>
+                Take care of your well-being: Prioritize self-care activities that promote physical and emotional
+                well-being, such as exercise, relaxation techniques, and engaging in hobbies or activities you enjoy.
+                <br><br>
+                Practice self-compassion: Be kind to yourself and avoid self-blame. Recognize that falling victim to
+                baiting does not make you at fault, and focus on learning and growing from the experience. <br><br>
+                Learn from the incident: Reflect on the baiting incident and identify any red flags or
+                vulnerabilities that were exploited. Use this knowledge to enhance your personal resilience and online
+                safety practices. <br><br>
+                Re-establish trust: Rebuilding trust may take time. Be cautious in your interactions online, and
+                gradually regain trust in your own judgment and in others. <br><br>
+                Seek professional help if needed: If you are struggling to recover emotionally or if the baiting
+                incident has significantly impacted your well-being, consider seeking professional support from
+                therapists or counselors. They can assist you in processing the experience and developing coping
+                strategies.
+            </p><br><br>
+
+            <a class="btn btn-primary btn-lg" style="background-color: #ff0000; border-color: #ff0000;"
+                href="{% url 'hacked' %}" class="btn btn-primary"
+                onclick="return confirm('\n Hi {{user.username}},\n This is a little surprise, do you really want to see?');">Surprise
+                Button (DO NOT CLICK)</a><br><br>
+
+            <div>
+                <div style="float: left;">
+                    <a class="btn btn-primary btn-lg" style="background-color: #11064d; border-color: black;"
+                        href="{% url 'baiting3' %}" class="btn btn-primary">☚ BACK TO BAITING MODULE 3</a><br><br>
+                </div>
+                <div style="float: right;">
+                </div>
+            </div><br><br>
+
+        </div>
+    </div>
+</div>
+{% else %}
+
+<meta http-equiv="refresh" content="1; url = {% url 'login' %}" />
+
+{% endif %}
+{% endblock content %}

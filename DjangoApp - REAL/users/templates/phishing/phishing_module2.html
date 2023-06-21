@@ -1,0 +1,236 @@
+{% extends "users/base.html" %}
+{% block title %} PHISHING MODULE 2{% endblock title%}
+{% block content %}
+{% if user.is_authenticated %}
+
+
+<div>
+  <div class="container p-3 my-3">
+    <div class="jumbotron"
+      style="text-align: justify; backdrop-filter: blur(5px); background-color: rgba(0, 0, 0, 0.80)">
+
+      <h2 class="display-4" style="text-transform:uppercase; color: lightblue;">Module 2: Identifying Phishing Attacks
+      </h2><br><br><br>
+      <h2 style="color: lightblue;">2.1 Common Phishing Techniques: Overview of common phishing methods such as email,
+        social media, and phone-based attacks.</h2><br>
+      <div>
+
+        <h3 style="color: lightblue;">2.1.1 Email Phishing:</h3>
+        <p style="color: lightblue;">Email phishing is one of the most prevalent methods used by attackers to deceive
+          individuals.
+          Attackers send deceptive emails that mimic legitimate organizations or individuals to trick recipients into
+          taking actions that compromise their security.
+          These phishing emails often employ persuasive language, urgency, or enticing offers to prompt recipients to
+          click on malicious links or provide sensitive information. <br><br>
+          To identify email phishing attempts, it's important to look out for certain red flags. Some indicators of
+          fraudulent emails include: <br><br>
+          ● Suspicious email addresses: Check if the sender's email address is misspelled, contains unusual characters,
+          or doesn't match the legitimate organization's domain. <br><br>
+          ● Poor grammar and spelling: Phishing emails often contain grammatical errors, typos, or awkward sentence
+          structures. <br><br>
+          ● Urgency or threats: Attackers create a sense of urgency or use threats to pressure recipients into taking
+          immediate action, such as providing personal information or clicking on a link. <br><br>
+          ● Request for sensitive information: Legitimate organizations usually don't request sensitive information,
+          such as passwords or financial details, via email.</p><br><br>
+
+        <h3 style="color: lightblue;">2.1.2 Social Media Phishing:</h3>
+        <p style="color: lightblue;">Attackers also exploit social media platforms to deceive users.
+          ● They create fake profiles or impersonate trusted individuals or organizations to trick users into sharing
+          personal information or clicking on malicious links. <br><br>
+          ● To identify social media phishing attempts, consider the following: <br><br>
+          ● Verify profiles: Check for any inconsistencies in the profile, such as a low number of friends or followers,
+          recent account creation, or unusual activity. <br><br>
+          ● Look for warning signs: Be cautious of messages or posts containing suspicious links or requests for
+          personal information. <br><br>
+          ● Be mindful of unsolicited messages: If you receive messages from unknown individuals or suspicious accounts,
+          exercise caution and refrain from sharing personal information.</p> <br><br>
+
+        <h3 style="color: lightblue;">2.1.3 Phone-Based Attacks:</h3>
+        <p style="color: lightblue;">Phone-based phishing attacks, known as vishing (voice phishing) and smishing (SMS
+          phishing),
+          involve attackers using voice calls or text messages to deceive individuals into revealing personal or
+          financial information. <br><br>
+          To identify phone-based phishing attempts: <br><br>
+          ● Be cautious of unsolicited calls or messages: Be skeptical of unexpected calls or messages, especially those
+          requesting personal information or posing urgent situations. <br><br>
+          ● Verify the source: If you receive a call or message claiming to be from a particular organization,
+          independently verify the authenticity of the communication by contacting the organization directly using
+          official contact information.</p><br><br>
+
+        <h2 style="color: lightblue;">Some more explanation about Phishing attacks</h2><br>
+        <iframe src="https://gamma.app/embed/73uku6nszwxnxru" style="width: 100%; height: 600px" allow="fullscreen"
+          title="PHISHING ATTACKS ON UNIVERSITY STUDENTS"></iframe>
+
+      </div><br><br>
+
+      <h2 style="color: lightblue;">2.2 Signs of Phishing: Identifying red flags and suspicious elements in phishing
+        emails or messages.</h2><br>
+      <p style="color: lightblue;">When it comes to identifying phishing attacks, it's essential to be vigilant and
+        aware of the common signs of fraudulent communication. Some key indicators include: <br><br>
+        ● Email spoofing: Attackers may manipulate the sender's information to make phishing emails appear to come from
+        a trusted source. Pay attention to the email address and compare it with known legitimate addresses. <br><br>
+        ● Poor grammar and spelling: Phishing emails often contain grammatical errors, misspellings, or awkward language
+        usage. <br><br>
+        ● Urgent or threatening language: Phishing emails often create a sense of urgency or use threats to pressure
+        recipients into taking immediate action. <br><br>
+        ● Request for sensitive information: Legitimate organizations typically do not request sensitive information,
+        such as passwords, credit card details, or social security numbers, via email or other non-secure channels.
+        <br><br>
+        ● By being aware of these signs, individuals can better recognize phishing attempts and avoid falling victim to
+        them.
+      </p>
+
+      <p style="color: lightblue;">Through Module 2, students will gain a comprehensive understanding of common phishing
+        techniques, learn how to identify signs of phishing attempts, and familiarize themselves with real-world
+        examples.
+        This knowledge will empower them to be more vigilant and proactive in protecting themselves against phishing
+        attacks.</p> <br><br>
+
+      <h3 style="color: lightblue;">Test Your Knowledge Here</h3><br>
+      <div>
+        <br>
+        <h3 style="color: lightblue;">Phishing Quiz 2</h3>
+        <script src="https://form.jotform.com/static/feedback2.js" type="text/javascript"></script>
+        <script type="text/javascript">
+          var JFL_231442303533444 = new JotformFeedback({
+            formId: '231442303533444',
+            base: 'https://form.jotform.com/',
+            windowTitle: 'Phishing Quiz 2',
+            backgroundColor: '#4a90e2',
+            fontColor: '#FFFFFF',
+            type: '0',
+            height: 500,
+            width: 700,
+            openOnLoad: false
+          });
+        </script>
+        <script type="text/javascript">
+          var ifr = document.getElementById("lightbox-231442303533444");
+          if (ifr) {
+            var src = ifr.src;
+            var iframeParams = [];
+            if (window.location.href && window.location.href.indexOf("?") > -1) {
+              iframeParams = iframeParams.concat(window.location.href.substr(window.location.href.indexOf("?") + 1).split('&'));
+            }
+            if (src && src.indexOf("?") > -1) {
+              iframeParams = iframeParams.concat(src.substr(src.indexOf("?") + 1).split("&"));
+              src = src.substr(0, src.indexOf("?"))
+            }
+            iframeParams.push("isIframeEmbed=1");
+            ifr.src = src + "?" + iframeParams.join('&');
+          }
+          window.handleIFrameMessage = function (e) {
+            if (typeof e.data === 'object') { return; }
+            var args = e.data.split(":");
+            if (args.length > 2) { iframe = document.getElementById("lightbox-" + args[(args.length - 1)]); } else { iframe = document.getElementById("lightbox"); }
+            if (!iframe) { return; }
+            switch (args[0]) {
+              case "scrollIntoView":
+                iframe.scrollIntoView();
+                break;
+              case "setHeight":
+                iframe.style.height = args[1] + "px";
+                if (!isNaN(args[1]) && parseInt(iframe.style.minHeight) > parseInt(args[1])) {
+                  iframe.style.minHeight = args[1] + "px";
+                }
+                break;
+              case "collapseErrorPage":
+                if (iframe.clientHeight > window.innerHeight) {
+                  iframe.style.height = window.innerHeight + "px";
+                }
+                break;
+              case "reloadPage":
+                window.location.reload();
+                break;
+              case "loadScript":
+                if (!window.isPermitted(e.origin, ['jotform.com', 'jotform.pro'])) { break; }
+                var src = args[1];
+                if (args.length > 3) {
+                  src = args[1] + ':' + args[2];
+                }
+                var script = document.createElement('script');
+                script.src = src;
+                script.type = 'text/javascript';
+                document.body.appendChild(script);
+                break;
+              case "exitFullscreen":
+                if (window.document.exitFullscreen) window.document.exitFullscreen();
+                else if (window.document.mozCancelFullScreen) window.document.mozCancelFullScreen();
+                else if (window.document.mozCancelFullscreen) window.document.mozCancelFullScreen();
+                else if (window.document.webkitExitFullscreen) window.document.webkitExitFullscreen();
+                else if (window.document.msExitFullscreen) window.document.msExitFullscreen();
+                break;
+            }
+            var isJotForm = (e.origin.indexOf("jotform") > -1) ? true : false;
+            if (isJotForm && "contentWindow" in iframe && "postMessage" in iframe.contentWindow) {
+              var urls = { "docurl": encodeURIComponent(document.URL), "referrer": encodeURIComponent(document.referrer) };
+              iframe.contentWindow.postMessage(JSON.stringify({ "type": "urls", "value": urls }), "*");
+            }
+          };
+          window.isPermitted = function (originUrl, whitelisted_domains) {
+            var url = document.createElement('a');
+            url.href = originUrl;
+            var hostname = url.hostname;
+            var result = false;
+            if (typeof hostname !== 'undefined') {
+              whitelisted_domains.forEach(function (element) {
+                if (hostname.slice((-1 * element.length - 1)) === '.'.concat(element) || hostname === element) {
+                  result = true;
+                }
+              });
+              return result;
+            }
+          };
+          if (window.addEventListener) {
+            window.addEventListener("message", handleIFrameMessage, false);
+          } else if (window.attachEvent) {
+            window.attachEvent("onmessage", handleIFrameMessage);
+          }
+        </script>
+        <a class="btn lightbox-231442303533444" style="
+                              margin-top: 16px;
+                              text-transform: uppercase;
+                              font-size: 14px;
+                              text-decoration: none;
+                              cursor: pointer;
+                              display: inline-block;
+                              padding: 10px;
+                              font-family: inherit;
+                              text-shadow: none;
+                              user-select: none;
+                              transition: all,.1s,ease-in;
+                              background-color: #4a90e2;
+                              border: 1px solid #4a90e2;
+                              color: #FFFFFF;
+                              ">
+          PHISHING QUIZ 2
+        </a>
+
+      </div><br><br>
+
+      <div>
+        <div style="float: left;">
+          <a class="btn btn-primary btn-lg" style="background-color: #11064d; border-color: black;"
+            href="{% url 'phishing1' %}" class="btn btn-primary"> ☚ BACK TO PHISHING MODULE 1</a><br><br>
+        </div>
+        <div style="float: right;">
+          <a class="btn btn-primary btn-lg" style="background-color: #11064d; border-color: black;"
+            href="{% url 'phishing3' %}" class="btn btn-primary">GO TO PHISHING MODULE 3 ☛</a><br><br>
+        </div>
+      </div><br><br>
+
+
+
+
+
+    </div>
+  </div>
+  {% else %}
+
+  <meta http-equiv="refresh" content="1; url = {% url 'login' %}" />
+
+
+  {% endif %}
+
+
+  {% endblock content %}

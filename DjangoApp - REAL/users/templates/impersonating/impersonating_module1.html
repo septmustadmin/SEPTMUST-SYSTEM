@@ -1,0 +1,206 @@
+{% extends "users/base.html" %}
+{% block title %} IMPERSONATING MODULE 1{% endblock title%}
+{% block content %}
+{% if user.is_authenticated %}
+
+
+
+<div>
+    <div class="container p-3 my-3">
+        <div class="jumbotron"
+            style="text-align: justify; backdrop-filter: blur(5px); background-color: rgba(0, 0, 0, 0.61)">
+
+            <h2 class="display-4" style="text-transform:uppercase; color: lightblue;">Module 1: Introduction To
+                Impersonating Module</h2><br><br><br>
+            <h2 style="color: lightblue;">1.1 Understanding Impersonation: Definition of impersonation,
+                Differentiating between different types of impersonation,
+                Common tactics used by impersonators</h2><br>
+            <p style="color: lightblue;">Impersonation prevention is a crucial aspect of personal and organizational
+                security in today's digital age. Impersonation refers to the act of assuming someone else's identity or
+                pretending to be someone you're not,
+                often with malicious intent. It can occur both online and in-person and poses significant risks and
+                consequences for individuals and organizations. The primary objectives of this training module are to
+                raise
+                awareness about impersonation, help participants understand its potential risks and consequences, and
+                provide strategies for preventing and mitigating impersonation attempts.</p>
+
+            <script src="https://cdn.commoninja.com/sdk/latest/commonninja.js" defer></script>
+            <div class="commonninja_component pid-d5670e6b-79e1-499b-bbcb-68109331b2a3"></div><br><br>
+
+            <div>
+
+                <h3 style="color: lightblue;">1.1.1 Definition of Impersonation:</h3>
+                <p style="color: lightblue;">Impersonation refers to the act of assuming or mimicking another person's
+                    identity, characteristics, or behavior with the intention of deceiving or misleading others.</p>
+                <br><br>
+
+                <h3 style="color: lightblue;">1.1.2 Differentiating between Different Types of Impersonation:</h3>
+                <p style="color: lightblue;">Impersonation can occur in various contexts, including online and in-person
+                    settings. <br><br>
+                    Online impersonation involves using false identities on digital platforms, such as social media,
+                    email, or online forums. <br><br>
+                    In-person impersonation, on the other hand, occurs when someone physically presents themselves as
+                    another person, often for fraudulent or manipulative purposes. <br><br>
+                    Understanding these distinctions is essential for recognizing and preventing different types of
+                    impersonation attempts.</p> <br><br>
+
+                <h3 style="color: lightblue;">1.1.3 Common Tactics Used by Impersonators:</h3>
+                <p style="color: lightblue;">Impersonators employ several tactics to deceive their targets. These
+                    tactics may include: <br><br>
+
+                    Phishing: Impersonators may use phishing emails, messages, or phone calls to trick individuals into
+                    revealing sensitive information like passwords, financial details, or personal data. <br><br>
+                    Social Engineering: Impersonators may exploit psychological manipulation techniques to gain the
+                    trust of their targets, leading them to disclose confidential information or perform actions they
+                    wouldn't normally do. <br><br>
+                    Spoofing: Impersonators may spoof email addresses, phone numbers, or websites to create a false
+                    sense of legitimacy and trick individuals into sharing sensitive information or carrying out
+                    unauthorized actions. <br><br>
+                    Impersonation of Authority Figures: Impersonators may pretend to be authoritative figures, such as
+                    government officials, law enforcement personnel, or company executives, to manipulate their targets
+                    into complying with their demands.</p><br><br>
+            </div><br><br>
+
+            <p style="color: lightblue;">In summary, To protect themselves, students should be cautious, verify requests
+                for personal information or financial transactions, use strong passwords, enable multi-factor
+                authentication, and report suspicious activities to their university's IT or security departments.</p>
+            <br><br>
+            <h3 style="color: lightblue;">Test Your Knowledge Here</h3><br><br>
+            <div>
+                <br>
+                <h3 style="color: lightblue;">Impersonating Quiz 1</h3>
+                <script src="https://form.jotform.com/static/feedback2.js" type="text/javascript"></script>
+                <script type="text/javascript">
+                    var JFL_231435246162450 = new JotformFeedback({
+                        formId: '231435246162450',
+                        base: 'https://form.jotform.com/',
+                        windowTitle: 'Impersonating Quiz 1',
+                        backgroundColor: '#4a90e2',
+                        fontColor: '#FFFFFF',
+                        type: '0',
+                        height: 500,
+                        width: 700,
+                        openOnLoad: false
+                    });
+                </script>
+                <script type="text/javascript">
+                    var ifr = document.getElementById("lightbox-231435246162450");
+                    if (ifr) {
+                        var src = ifr.src;
+                        var iframeParams = [];
+                        if (window.location.href && window.location.href.indexOf("?") > -1) {
+                            iframeParams = iframeParams.concat(window.location.href.substr(window.location.href.indexOf("?") + 1).split('&'));
+                        }
+                        if (src && src.indexOf("?") > -1) {
+                            iframeParams = iframeParams.concat(src.substr(src.indexOf("?") + 1).split("&"));
+                            src = src.substr(0, src.indexOf("?"))
+                        }
+                        iframeParams.push("isIframeEmbed=1");
+                        ifr.src = src + "?" + iframeParams.join('&');
+                    }
+                    window.handleIFrameMessage = function (e) {
+                        if (typeof e.data === 'object') { return; }
+                        var args = e.data.split(":");
+                        if (args.length > 2) { iframe = document.getElementById("lightbox-" + args[(args.length - 1)]); } else { iframe = document.getElementById("lightbox"); }
+                        if (!iframe) { return; }
+                        switch (args[0]) {
+                            case "scrollIntoView":
+                                iframe.scrollIntoView();
+                                break;
+                            case "setHeight":
+                                iframe.style.height = args[1] + "px";
+                                if (!isNaN(args[1]) && parseInt(iframe.style.minHeight) > parseInt(args[1])) {
+                                    iframe.style.minHeight = args[1] + "px";
+                                }
+                                break;
+                            case "collapseErrorPage":
+                                if (iframe.clientHeight > window.innerHeight) {
+                                    iframe.style.height = window.innerHeight + "px";
+                                }
+                                break;
+                            case "reloadPage":
+                                window.location.reload();
+                                break;
+                            case "loadScript":
+                                if (!window.isPermitted(e.origin, ['jotform.com', 'jotform.pro'])) { break; }
+                                var src = args[1];
+                                if (args.length > 3) {
+                                    src = args[1] + ':' + args[2];
+                                }
+                                var script = document.createElement('script');
+                                script.src = src;
+                                script.type = 'text/javascript';
+                                document.body.appendChild(script);
+                                break;
+                            case "exitFullscreen":
+                                if (window.document.exitFullscreen) window.document.exitFullscreen();
+                                else if (window.document.mozCancelFullScreen) window.document.mozCancelFullScreen();
+                                else if (window.document.mozCancelFullscreen) window.document.mozCancelFullScreen();
+                                else if (window.document.webkitExitFullscreen) window.document.webkitExitFullscreen();
+                                else if (window.document.msExitFullscreen) window.document.msExitFullscreen();
+                                break;
+                        }
+                        var isJotForm = (e.origin.indexOf("jotform") > -1) ? true : false;
+                        if (isJotForm && "contentWindow" in iframe && "postMessage" in iframe.contentWindow) {
+                            var urls = { "docurl": encodeURIComponent(document.URL), "referrer": encodeURIComponent(document.referrer) };
+                            iframe.contentWindow.postMessage(JSON.stringify({ "type": "urls", "value": urls }), "*");
+                        }
+                    };
+                    window.isPermitted = function (originUrl, whitelisted_domains) {
+                        var url = document.createElement('a');
+                        url.href = originUrl;
+                        var hostname = url.hostname;
+                        var result = false;
+                        if (typeof hostname !== 'undefined') {
+                            whitelisted_domains.forEach(function (element) {
+                                if (hostname.slice((-1 * element.length - 1)) === '.'.concat(element) || hostname === element) {
+                                    result = true;
+                                }
+                            });
+                            return result;
+                        }
+                    };
+                    if (window.addEventListener) {
+                        window.addEventListener("message", handleIFrameMessage, false);
+                    } else if (window.attachEvent) {
+                        window.attachEvent("onmessage", handleIFrameMessage);
+                    }
+                </script>
+                <a class="btn lightbox-231435246162450" style="
+                        margin-top: 16px;
+                        text-transform: uppercase;
+                        font-size: 14px;
+                        text-decoration: none;
+                        cursor: pointer;
+                        display: inline-block;
+                        padding: 10px;
+                        font-family: inherit;
+                        text-shadow: none;
+                        user-select: none;
+                        transition: all,.1s,ease-in;
+                        background-color: #4a90e2;
+                        border: 1px solid #4a90e2;
+                        color: #FFFFFF;
+                        ">
+                    IMPERSONATING QUIZ 1
+                </a>
+            </div><br><br>
+
+            <div>
+                <div style="float: left;">
+                </div>
+                <div style="float: right;">
+                    <a class="btn btn-primary btn-lg" style="background-color: #11064d; border-color: black;"
+                        href="{% url 'impersonating2' %}" class="btn btn-primary">GO TO IMPERSONATING MODULE 2 ☛</a><br><br>
+                </div>
+            </div><br><br>
+
+        </div>
+    </div>
+</div>
+{% else %}
+
+<meta http-equiv="refresh" content="1; url = {% url 'login' %}" />
+
+{% endif %}
+{% endblock content %}

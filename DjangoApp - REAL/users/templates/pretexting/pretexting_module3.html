@@ -1,0 +1,80 @@
+{% extends "users/base.html" %}
+{% block title %} PRETEXTING MODULE 3 {% endblock title%}
+{% block content %}
+{% if user.is_authenticated %}
+
+
+<div>
+    <div class="container p-3 my-3">
+        <div class="jumbotron"
+            style="text-align: justify; backdrop-filter: blur(5px); background-color: rgba(0, 0, 0, 0.61)">
+
+            <h2 class="display-4" style="text-transform:uppercase; color: lightblue;">MODULE 3: Preventive Measures</h2>
+            <br><br><br>
+            <h2 style="color: lightblue;">3.1 Preventive Measures
+                Creating strong and unique passwords,
+                Utilizing multi-factor authentication,
+                Securing personal devices and accounts,
+                Raising awareness and educating others about pretexting</h2><br>
+            <p style="color: lightblue;">Pretexting awareness is crucial in various contexts to protect against social
+                engineering attacks. Here are some key areas where pretexting awareness is important:
+            </p><br><br>
+            <div>
+                <h3 style="color: lightblue;">3.1.1 Creating strong and unique passwords</h3>
+                <p style="color: lightblue;">Use strong, complex passwords for all your accounts, incorporating a
+                    combination of letters, numbers, and special characters. <br><br>
+                    Avoid using easily guessable information such as birthdays or names. <br><br>
+                    Furthermore, ensure that you have unique passwords for each account to prevent unauthorized access
+                    in case one account is compromised.</p> <br><br>
+
+                <h3 style="color: lightblue;">3.1.2 Utilizing multi-factor authentication</h3>
+                <p style="color: lightblue;">Enable multi-factor authentication (MFA) wherever possible, which provides
+                    an additional layer of security. MFA typically requires a secondary verification step,
+                    such as a unique code sent to your phone or a fingerprint scan, in addition to your password. This
+                    helps protect against unauthorized access even if your password is compromised.</p><br><br>
+
+                <h3 style="color: lightblue;">3.1.3 Securing personal devices and accounts</h3>
+                <p style="color: lightblue;">
+                    Keep your devices and software up to date with the latest security patches and updates. <br><br>
+                    Use reputable antivirus and anti-malware software to protect against malicious attacks. <br><br>
+                    Secure your accounts with strong passwords and consider using password managers to securely store
+                    and manage your credentials.</p> <br><br>
+
+                <h3 style="color: lightblue;">3.1.4 Raising awareness and educating others about pretexting</h3>
+                <p style="color: lightblue;">
+                    Education plays a vital role in combating pretexting. <br><br>
+                    Stay informed about the latest social engineering techniques and share this knowledge with others.
+                    <br><br>
+                    Encourage your colleagues, friends, and family members to be vigilant and skeptical when interacting
+                    with unknown or suspicious individuals. <br><br>
+                    Promote a culture of cybersecurity awareness and encourage reporting of any suspicious incidents.
+                </p> <br><br>
+
+            </div>
+            <div>
+                <iframe src="https://gamma.app/embed/dkz6sz1r311uhx2" style="width: 100%; height: 600px"
+                    allow="fullscreen" title="PRETEXTING ATTACKS ON UNIVERSITY STUDENTS"></iframe>
+            </div><br><br><br>
+            <p style="color: lightblue;">By implementing these preventive measures and fostering a culture of awareness,
+                individuals can significantly reduce the risk of falling victim to pretexting attacks. Remember,
+                caution, skepticism, and verification are key when dealing with requests for sensitive information or
+                unfamiliar situations.</p><br><br>
+
+
+            <div>
+                <div style="float: left;">
+                    <a class="btn btn-primary btn-lg" style="background-color: #11064d; border-color: black;"
+                    href="{% url 'pretexting2' %}" class="btn btn-primary">☚ BACK TO PRETEXTING MODULE 2</a><br><br>
+                </div>
+                <div style="float: right;">
+                </div>
+            </div><br><br>
+        </div>
+    </div>
+</div>
+{% else %}
+
+<meta http-equiv="refresh" content="1; url = {% url 'login' %}" />
+
+{% endif %}
+{% endblock content %}

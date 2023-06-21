@@ -1,0 +1,95 @@
+{% extends "users/base.html" %}
+{% block title %} IMPERSONATING MODULE 3{% endblock title%}
+{% block content %}
+{% if user.is_authenticated %}
+
+
+
+<div>
+    <div class="container p-3 my-3">
+        <div class="jumbotron"
+            style="text-align: justify; backdrop-filter: blur(5px); background-color: rgba(0, 0, 0, 0.61)">
+
+            <h2 class="display-4" style="text-transform:uppercase; color: lightblue;">Module 2: Identifying
+                Impersonation Attempts:</h2><br><br><br>
+            <h2 style="color: lightblue;">3.1 Digital Impersonation Prevention:
+                Safeguarding personal information online,
+                Recognizing phishing attempts and fake websites,
+                Protecting passwords and using strong authentication methods,
+                Reporting suspicious online activities</h2><br>
+
+            <div>
+
+                <h3 style="color: lightblue;">3.1.1 Safeguarding Personal Information Online:</h3>
+                <p style="color: lightblue;">
+                    Limit Personal Information Sharing: Be cautious about sharing personal information online,
+                    especially on public platforms or with unknown individuals.
+                    Privacy Settings: Review and adjust privacy settings on social media platforms and other online
+                    accounts to restrict access to your personal information.
+                    Be Mindful of Social Engineering: Be cautious of individuals trying to manipulate you into revealing
+                    personal information or accessing your accounts. Be skeptical of requests for personal or sensitive
+                    information, even from seemingly trusted sources.</p><br><br>
+
+                <h3 style="color: lightblue;">3.1.2 Recognizing Phishing Attempts and Fake Websites:</h3>
+                <p style="color: lightblue;">
+                    Exercise Caution with Email Attachments and Links: Avoid opening suspicious email attachments or
+                    clicking on links from unknown or untrustworthy sources, as they may lead to phishing websites or
+                    malware. <br><br>
+                    Check Website Security: Before entering personal or financial information on a website, ensure that
+                    it has a secure connection (look for "https://" and a padlock icon in the address bar). <br><br>
+                    Verify Website Authenticity: Scrutinize website URLs, design, and content for any signs of
+                    inconsistency or suspicious elements. Fake websites often mimic the appearance of legitimate ones.
+                </p> <br><br>
+
+                <h3 style="color: lightblue;">3.1.3 Protecting Passwords and Using Strong Authentication Methods:</h3>
+                <p style="color: lightblue;">
+                    Use Strong, Unique Passwords: Create complex passwords consisting of a combination of letters,
+                    numbers, and symbols. Avoid using easily guessable information or reusing passwords across multiple
+                    accounts. <br><br>
+                    Enable Two-Factor Authentication (2FA): Enable 2FA wherever possible to add an extra layer of
+                    security to your accounts. This typically involves providing a second verification factor, such as a
+                    unique code sent to your mobile device. <br><br>
+                    Regularly Update and Secure Your Devices: Keep your devices' operating systems, applications, and
+                    antivirus software up to date to protect against vulnerabilities that could be exploited by
+                    impersonators.</p><br><br>
+
+                <h3 style="color: lightblue;">3.1.4 Reporting Suspicious Online Activities:</h3>
+                <p style="color: lightblue;">If you come across suspicious online activities or believe you have
+                    encountered an impersonation attempt, take the following steps: <br><br>
+                    Report to Relevant Authorities: Contact your local law enforcement or cybercrime reporting agencies
+                    to report the incident and provide them with all relevant information. <br><br>
+                    Notify the Affected Party: If the impersonation involves another person or organization, inform them
+                    promptly so that they can take appropriate action and protect themselves. <br><br>
+                    Report to Online Platforms: If the impersonation occurs on social media or other online platforms,
+                    report the account or activity to the platform administrators. <br><br>
+                    Remaining vigilant, following security best practices, and reporting any suspicious activities can
+                    help prevent digital impersonation and protect yourself and others from potential harm.</p><br><br>
+
+            </div><br><br>
+            <div>
+                <iframe src="https://gamma.app/embed/bz5wcvrdxn0dvjh" style="width: 100%; height: 600px"
+                    allow="fullscreen" title="Impersonation Attacks: Protecting University Students"></iframe>
+            </div><br><br>
+            <p style="color: lightblue;">In summary, To protect themselves, students should be cautious, verify requests
+                for personal information or financial transactions, use strong passwords, enable multi-factor
+                authentication, and report suspicious activities to their university's IT or security departments.</p>
+            <br><br>
+            <div>
+                <div style="float: left;">
+                    <a class="btn btn-primary btn-lg" style="background-color: #11064d; border-color: black;"
+                        href="{% url 'impersonating2' %}" class="btn btn-primary">☚ BACK TO IMPERSONATING MODULE
+                        2</a><br><br>
+                </div>
+                <div style="float: right;">
+                </div>
+            </div><br><br>
+
+        </div>
+    </div>
+</div>
+{% else %}
+
+<meta http-equiv="refresh" content="1; url = {% url 'login' %}" />
+
+{% endif %}
+{% endblock content %}

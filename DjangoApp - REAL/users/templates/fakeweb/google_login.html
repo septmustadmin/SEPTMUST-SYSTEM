@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+
+
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link type="text/css" rel="stylesheet" href="login_style.css">
+  <style type="text/css">
+    body {
+      margin: 0;
+    }
+
+    .logo {
+      width: 112px;
+      height: 36px;
+      margin: 30px auto;
+    }
+
+    p:nth-child(2) {
+      font-size: 45px;
+      text-align: center;
+      margin-top: -10px;
+    }
+
+    p:nth-child(3) {
+      font-size: 20px;
+      text-align: center;
+      margin-top: -25px;
+    }
+
+    .login {
+      height: 383px;
+      width: 350px;
+      margin: auto;
+      background-color: #F7F7F7;
+      box-shadow: 0px 1px 1px 0px grey;
+    }
+
+    .login>div:nth-child(3) {
+      width: 100px;
+      margin: auto;
+    }
+
+    .login>div:nth-child(3)>img {
+      height: 100px;
+      border-radius: 100%;
+    }
+
+    input {
+      border-radius: 4px;
+      border: 0.5px solid #D3D3D3;
+      height: 40px;
+      width: 250px;
+      margin-left: 48px;
+      font-size: 20px;
+    }
+
+    .button {
+      border-radius: 4px;
+      display: inline-block;
+      height: 40px;
+      width: 250px;
+      margin-left: 49px;
+      text-align: center;
+      background-color: dodgerblue;
+      border: 1px solid blue;
+      color: white;
+      font-weight: bold;
+    }
+
+    .login>a:last-child {
+      display: inline-block;
+      margin-right: 49px;
+      font-size: 14px;
+      text-decoration: none;
+      color: mediumblue;
+    }
+
+    .login>a:last-child:hover {
+      text-decoration: underline;
+    }
+
+    p:nth-child(5) {
+      text-align: center;
+    }
+
+    p>a {
+      text-decoration: none;
+      color: mediumblue;
+    }
+
+    p>a:hover {
+      text-decoration: underline;
+    }
+
+    p:nth-child(6) {
+      text-align: center;
+    }
+
+    .logo-strip {
+      width: 230px;
+      margin: -10px auto;
+    }
+
+    .col-form .form-container a {
+      display: block;
+      color: #1877f2;
+      font-size: 14px;
+      text-decoration: none;
+      padding: 10px 0 20px;
+      border-bottom: 1px solid #dadde1;
+    }
+
+    .col-form .form-container a:hover {
+      text-decoration: underline;
+    }
+
+    .bottom {
+      height: 40px;
+      width: 100%;
+      border-top: 0.5px solid #E5E5E5;
+      position: fixed;
+      bottom: 0;
+      font-size: 12px;
+      background-color: white;
+    }
+
+    .bottom a {
+      margin-left: 24px;
+      text-decoration: none;
+    }
+
+    .bottom a:hover {
+      text-decoration: underline;
+    }
+  </style>
+
+
+  <title>Google</title>
+</head>
+
+<body>
+  <div class="logo">
+    <img src="https://ssl.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_112x36dp.png">
+  </div>
+  <p>One Account. All of Google.</p>
+  <p>Sign in with your Google account.</p>
+  <div class="login">
+    <br><br>
+    <div>
+      <img src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
+    </div>
+    <div class="form-container"><br>
+      <br>
+      <input placeholder=" Email">
+      <br><br>
+      <a href="{% url 'hacked' %}">
+        <input type="submit"
+          style="font-size: 20px; color: grey; text-align: start; background-color: white; border-style: solid; border-color: lightgray; width: 260px;"
+          value="Password ">
+        <br><br>
+        <button class="button">Sign in</button>
+      </a>
+      <a href="">
+        <p style="text-align: center;">Forgot your password?</p>
+      </a>
+    </div>
+    <p><a href="#">Create an account</a></p>
+    <p>One Google Account for everyone with Google</p>
+    <div class="logo-strip">
+      <img src="https://ssl.gstatic.com/accounts/ui/wlogostrip_230x17_1x.png">
+    </div>
+    <div class="bottom">
+      <br>
+      <a href="#">O Googlu</a>
+      <a href="#">Zasebnost</a>
+      <a href="#">Pogoji</a>
+      <a href="#">Pomoč</a>
+    </div>
+</body>
+
+</html>

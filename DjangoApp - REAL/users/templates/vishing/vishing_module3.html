@@ -1,0 +1,94 @@
+{% extends "users/base.html" %}
+{% block title %} VISHING MODULE 3 {% endblock title%}
+{% block content %}
+{% if user.is_authenticated %}
+
+
+<div>
+  <div class="container p-3 my-3">
+    <div class="jumbotron"
+      style="text-align: justify; backdrop-filter: blur(5px); background-color: rgba(0, 0, 0, 0.61)">
+
+      <div>
+        <h2 class="display-4" style="text-transform:uppercase; color: lightblue;">Module 3: Vishing Prevention
+          Strategies</h2><br><br><br>
+        <h2 style="color: lightblue;">3.1 Vishing Prevention Strategies: Verify caller identity through known contact
+          details, Be cautious with sharing personal information over the phone,
+          Recognize warning signs of a vishing attempt (e.g., urgency, threats), Avoid clicking on links or calling back
+          unfamiliar numbers, Reporting incidents and suspicious calls</h2><br>
+
+        <h3 style="color: lightblue;">3.1.1 Verify caller identity through known contact details:</h3>
+        <p style="color: lightblue;">To prevent falling victim to vishing attacks, follow these steps: <br><br>
+          Never provide personal or financial information to a caller without verifying their identity. Use known
+          contact details obtained from official websites, statements, or the back of your credit or debit cards to
+          reach out to the organization directly. Do not rely on contact information provided by the caller. <br><br>
+          Be cautious even if the caller claims to be from a trusted organization. Attackers can spoof caller ID or
+          mimic official greetings to appear legitimate. Verify their identity independently before sharing any
+          sensitive information.</p><br><br>
+
+          <div>
+            <h4 class="display-4" style="text-transform:uppercase; color: lightblue;">TRY THIS GAME TO SEE YOUR KNOWLEDGE</h4><br><br><br>
+            <iframe style="max-width:100%" src="https://wordwall.net/embed/08c1ca63aac24bfc8487aba7272f350b?themeId=23&templateId=49&fontStackId=0" width="100%" height="600PX" frameborder="0" allowfullscreen></iframe>
+          </div>
+
+        <h3 style="color: lightblue;">3.1.2 Be cautious with sharing personal information over the phone:</h3>
+        <p style="color: lightblue;">
+          Avoid sharing personal information like Social Security numbers, credit card details, passwords, or PINs over
+          the phone unless you initiated the call or can independently verify the legitimacy of the caller. <br><br>
+          Legitimate organizations usually have secure methods for verifying your identity, such as asking specific
+          security questions or requesting information that is not highly sensitive.</p> <br><br>
+
+        <h3 style="color: lightblue;">3.1.3 Recognize warning signs of a vishing attempt (e.g., urgency, threats):</h3>
+        <p style="color: lightblue;">
+          Be wary of callers who create a sense of urgency, pressure you to take immediate action, or threaten you with
+          consequences if you don't comply. Legitimate organizations typically do not use such tactics. <br><br>
+          Pay attention to inconsistencies in the caller's story or behavior. Scammers may make mistakes, exhibit
+          unprofessionalism, or try to rush you into making a decision. <br><br>
+          Trust your instincts. If something feels off or suspicious about the call, trust your gut and refrain from
+          sharing sensitive information.</p><br><br>
+
+        <h3 style="color: lightblue;">3.1.4 Avoid clicking on links or calling back unfamiliar numbers:</h3>
+        <p style="color: lightblue;">
+          Do not click on links or call back numbers provided by unknown callers, even if they claim it is for
+          verification or security purposes. These links and numbers may lead to phishing websites or connect you to
+          scammers. <br><br>
+          If you receive a voicemail or missed call from an unknown number, do not call back without independently
+          verifying the legitimacy of the caller.</p><br><br>
+
+        <h3 style="color: lightblue;">3.1.4 Avoid clicking on links or calling back unfamiliar numbers:</h3>
+        <p style="color: lightblue;">
+          Report any vishing attempts or incidents to your local law enforcement agency, as well as the appropriate
+          organizations that the scammer claimed to represent (e.g., your bank or the IRS). <br><br>
+          If you receive suspicious calls, you can also report them to the Federal Trade Commission (FTC) in the United
+          States or your country's equivalent regulatory body. <br><br>
+          Sharing information about vishing attempts can help raise awareness and protect others from falling victim to
+          similar scams. Consider reporting the incident to relevant online communities, forums, or social media
+          platforms.</p><br><br>
+
+
+      </div><br><br>
+      <div>
+        <iframe src="https://gamma.app/embed/lyhcwuekddyd7iy" style="width: 100%; height: 600px" allow="fullscreen"
+          title="VISHING ATTACKS ON UNIVERSITY STUDENTS"></iframe>
+      </div><br><br>
+
+      <div>
+        <div style="float: left;">
+          <a class="btn btn-primary btn-lg" style="background-color: #11064d; border-color: black;"
+            href="{% url 'vishing2' %}" class="btn btn-primary">☚ BACK TO VISHING MODULE 2</a><br><br>
+        </div>
+        <div style="float: right;">
+        </div>
+
+    </div>
+  </div>
+</div>
+{% else %}
+
+<meta http-equiv="refresh" content="1; url = {% url 'login' %}" />
+
+
+{% endif %}
+
+
+{% endblock content %}
