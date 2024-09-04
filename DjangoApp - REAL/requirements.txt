@@ -2,9 +2,9 @@ asgiref==3.5.2
 certifi==2022.9.24
 cffi==1.15.1
 charset-normalizer==2.1.1
-cryptography==38.0.1
+cryptography==43.0.1
 defusedxml==0.7.1
-Django==4.1.2
+Django==4.2.16
 idna==3.4
 oauthlib==3.2.2
 Pillow==9.2.0
